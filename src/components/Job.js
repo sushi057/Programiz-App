@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Filter from "./Filter";
 
 function Job(props) {
   const { job } = props;
@@ -6,12 +7,18 @@ function Job(props) {
   const [selectKeywords, setSelectKeywords] = useState(null);
 
   function addKeywords(key) {
-    setSelectKeywords(key);
+    if (key in selectKeywords) {
+    } else {
+      setSelectKeywords(...key);
+    }
+
     console.log(selectKeywords);
   }
 
   return (
     <div className="main">
+      {selectKeywords !== null &&
+        selectKeywords.map((item) => <Filter filterWords={item} />)}
       <div className="left-part">
         <img src={job.company_logo} alt="job logo" />
         <div className="job-details">
