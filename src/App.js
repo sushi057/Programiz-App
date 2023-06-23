@@ -1,7 +1,15 @@
 import "./App.css";
+import Job from "./components/Job";
+import jobLists from "./assets/jobLists";
 
 function App() {
-  return <div className="App">Lol</div>;
+  return (
+    <div className="App">
+      {jobLists.map((item) => (
+        <Job />
+      ))}
+    </div>
+  );
 }
 
 export default App;
