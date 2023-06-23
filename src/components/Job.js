@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Job(props) {
   const { job } = props;
+
+  const [selectKeywords, setSelectKeywords] = useState(null);
+
+  function addKeywords(key) {
+    setSelectKeywords(key);
+    console.log(selectKeywords);
+  }
+
   return (
     <div className="main">
       <div className="left-part">
@@ -23,7 +31,13 @@ function Job(props) {
       </div>
       <div className="right-part">
         {job.keywords.map((item) => (
-          <button className="keyword">{item}</button>
+          <button
+            key={item}
+            className="keyword"
+            onClick={() => addKeywords(item)}
+          >
+            {item}
+          </button>
         ))}
       </div>
     </div>
