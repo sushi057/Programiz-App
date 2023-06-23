@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       {jobLists.map((item) => (
-        <Job />
+        <Job job={item} />
       ))}
     </div>
   );

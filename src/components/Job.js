@@ -21,7 +21,11 @@ function Job(props) {
           </div>
         </div>
       </div>
-      <div className="right-part"></div>
+      <div className="right-part">
+        {job.keywords.map((item) => (
+          <button className="keyword">{item}</button>
+        ))}
+      </div>
     </div>
   );
 }
