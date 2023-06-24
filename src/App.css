@@ -22,7 +22,7 @@ html {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  background-color: white;
+  background-color: var(--accent);
   margin: 2rem 5rem;
   padding: 1.5rem 2rem;
   filter: drop-shadow(0 0 10px var(--background));
