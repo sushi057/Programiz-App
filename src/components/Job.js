@@ -28,7 +28,7 @@ function Job(props) {
 
   return (
     <div className="main">
-      <div className="filter-bar">
+      {/* <div className="filter-bar">
         {selectKeywords.length !== 0 && (
           <div className="key-filter">
             <div className="filter-words">
@@ -46,7 +46,7 @@ function Job(props) {
             </button>
           </div>
         )}
-      </div>
+      </div> */}
       <div className="left-part">
         <img src={job.company_logo} alt="job logo" />
         <div className="job-details">
