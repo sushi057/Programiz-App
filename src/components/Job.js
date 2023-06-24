@@ -7,9 +7,15 @@ function Job(props) {
   const [selectKeywords, setSelectKeywords] = useState(null);
 
   function addKeywords(key) {
-    if (key in selectKeywords) {
+    if (selectKeywords.includes(key)) {
+      setSelectKeywords((prevItem) => {
+        let index = selectKeywords.indexOf(key);
+        const removeKeywords = [...prevItem];
+        removeKeywords.splice(index, 1);
+        return removeKeywords;
+      });
     } else {
-      setSelectKeywords(...key);
+      setSelectKeywords((prevItem) => [...prevItem, key]);
     }
 
     console.log(selectKeywords);
