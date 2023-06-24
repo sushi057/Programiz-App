@@ -30,6 +30,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1.1rem;
+  background-color: var(--accent);
 }
 
 .left-part {
@@ -70,3 +71,20 @@
   color: gray;
 }
 
+.right-part {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.right-part button {
+  border: 0;
+  background-color: var(--background);
+  padding: 0.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.right-part button:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}

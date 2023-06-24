@@ -58,7 +58,9 @@ function Job(props) {
           <p className="job-title">{job.position}</p>
 
           <div className="bottom-details">
-            <p className="job-time">{job.posted_on}</p>
+            <p className="job-time">
+              {Math.floor((job.posted_on - 1680000000000) / 700000000)}d ago
+            </p>
             <p className="job-timing">{job.timing}</p>
             <p className="location">{job.location}</p>
           </div>
