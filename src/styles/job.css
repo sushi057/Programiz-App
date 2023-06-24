@@ -1,36 +1,12 @@
-.key-filter {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem;
-  background-color: var(--accent);
-}
-
-.filter-words {
-  display: flex;
-  flex-direction: row;
-  gap: 1.15rem;
-}
-
-.clear-btn {
-  border: 0;
-  background-color: inherit;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--primary);
-}
-
-.clear-btn:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 /* Main Component */
 .main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.1rem;
+  padding: 1.5rem 2rem;
   background-color: var(--accent);
+  margin: 2rem 5rem;
+  filter: drop-shadow(0 0 10px var(--background));
 }
 
 .left-part {
@@ -50,8 +26,8 @@
 }
 
 .left-part img {
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 100%;
   object-fit: fill;
 }
@@ -79,9 +55,10 @@
 .right-part button {
   border: 0;
   background-color: var(--background);
-  padding: 0.4rem;
+  padding: 0.5rem;
   font-weight: bold;
   color: white;
+  font-size: 0.9rem;
 }
 
 .right-part button:hover {

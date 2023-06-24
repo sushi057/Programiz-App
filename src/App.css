@@ -15,4 +15,39 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.key-filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: white;
+  margin: 2rem 5rem;
+  padding: 1.5rem 2rem;
+  filter: drop-shadow(0 0 10px var(--background));
+  overflow: scroll;
+}
+
+.key-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-words {
+  display: flex;
+  flex-direction: row;
+  gap: 1.15rem;
+}
+
+.clear-btn {
+  border: 0;
+  background-color: inherit;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
