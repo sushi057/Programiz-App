@@ -25,6 +25,16 @@ function App() {
   function clearKeywords() {
     setSelectKeywords([]);
   }
+
+  function removeCurrentTag(key) {
+    setSelectKeywords((prevItem) => {
+      let index = selectKeywords.indexOf(key);
+      const removeKeywords = [...prevItem];
+      removeKeywords.splice(index, 1);
+      return removeKeywords;
+    });
+  }
+
   return (
     <div className="App">
       <div className="filter-bar">
@@ -32,7 +42,10 @@ function App() {
           <div className="key-filter">
             <div className="filter-words">
               {selectKeywords.map((item) => (
-                <Filter filterWords={item} />
+                <Filter
+                  filterWords={item}
+                  removeCurrentTag={removeCurrentTag}
+                />
               ))}
             </div>
             <button
