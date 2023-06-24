@@ -50,12 +50,12 @@ function Job(props) {
       <div className="left-part">
         <img src={job.company_logo} alt="job logo" />
         <div className="job-details">
-          <div className="top-deati">
+          <div className="top-detail">
             <p className="company">{job.company}</p>
             <div className="job-features"></div>
           </div>
 
-          <h2 className="job-title">{job.position}</h2>
+          <p className="job-title">{job.position}</p>
 
           <div className="bottom-details">
             <p className="job-time">{job.posted_on}</p>

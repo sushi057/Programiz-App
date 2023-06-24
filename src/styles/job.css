@@ -24,6 +24,49 @@
   cursor: pointer;
 }
 
-
 /* Main Component */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.1rem;
+}
+
+.left-part {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.company,
+.job-title {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.job-title {
+  font-size: 1.125rem;
+}
+
+.left-part img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  object-fit: fill;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.bottom-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: gray;
+}
 
