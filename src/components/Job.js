@@ -4,7 +4,7 @@ import Filter from "./Filter";
 function Job(props) {
   const { job } = props;
 
-  const [selectKeywords, setSelectKeywords] = useState(null);
+  const [selectKeywords, setSelectKeywords] = useState([]);
 
   function addKeywords(key) {
     if (selectKeywords.includes(key)) {
@@ -21,10 +21,28 @@ function Job(props) {
     console.log(selectKeywords);
   }
 
+  function clearKeywords() {
+    setSelectKeywords([]);
+  }
+
   return (
     <div className="main">
-      {selectKeywords !== null &&
-        selectKeywords.map((item) => <Filter filterWords={item} />)}
+      {selectKeywords.length !== 0 && (
+        <div className="key-filter">
+          {selectKeywords.map((item) => (
+            <Filter filterWords={item} />
+          ))}
+          <button
+            className="clear-btn"
+            onClick={() => {
+              clearKeywords();
+            }}
+          >
+            Clear
+          </button>
+        </div>
+      )}
+
       <div className="left-part">
         <img src={job.company_logo} alt="job logo" />
         <div className="job-details">
