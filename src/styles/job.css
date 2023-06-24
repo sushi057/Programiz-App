@@ -1,0 +1,25 @@
+.key-filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  background-color: var(--accent);
+}
+
+.filter-words {
+  display: flex;
+  flex-direction: row;
+  gap: 1.15rem;
+}
+
+.clear-btn {
+  border: 0;
+  background-color: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

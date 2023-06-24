@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Filter from "./Filter";
+import "../styles/job.css";
 
 function Job(props) {
   const { job } = props;
@@ -30,9 +31,11 @@ function Job(props) {
       <div className="filter-bar">
         {selectKeywords.length !== 0 && (
           <div className="key-filter">
-            {selectKeywords.map((item) => (
-              <Filter filterWords={item} />
-            ))}
+            <div className="filter-words">
+              {selectKeywords.map((item) => (
+                <Filter filterWords={item} />
+              ))}
+            </div>
             <button
               className="clear-btn"
               onClick={() => {

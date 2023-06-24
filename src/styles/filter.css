@@ -6,13 +6,17 @@
   gap: 0.6rem;
   width: fit-content;
   background-color: var(--background);
+  border-radius: 5%;
+}
+
+.filter-key {
+  padding: 0.2rem 0.3rem;
 }
 
 .crossX {
-  border-radius: 5%;
   background-color: var(--primary);
   color: var(--accent);
-  padding: 0.2rem 0.45rem;
+  padding: 0.3rem 0.45rem;
   font-weight: bold;
   cursor: pointer;
 }
