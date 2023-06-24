@@ -1,6 +1,22 @@
 .filter {
   display: flex;
   flex-direction: row;
-  gap: .6rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  background-color: var(--background);
 }
 
+.crossX {
+  border-radius: 5%;
+  background-color: var(--primary);
+  color: var(--accent);
+  padding: 0.2rem 0.45rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.crossX:hover {
+  background-color: var(--secondary);
+}
