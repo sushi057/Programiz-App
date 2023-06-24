@@ -27,22 +27,23 @@ function Job(props) {
 
   return (
     <div className="main">
-      {selectKeywords.length !== 0 && (
-        <div className="key-filter">
-          {selectKeywords.map((item) => (
-            <Filter filterWords={item} />
-          ))}
-          <button
-            className="clear-btn"
-            onClick={() => {
-              clearKeywords();
-            }}
-          >
-            Clear
-          </button>
-        </div>
-      )}
-
+      <div className="filter-bar">
+        {selectKeywords.length !== 0 && (
+          <div className="key-filter">
+            {selectKeywords.map((item) => (
+              <Filter filterWords={item} />
+            ))}
+            <button
+              className="clear-btn"
+              onClick={() => {
+                clearKeywords();
+              }}
+            >
+              Clear
+            </button>
+          </div>
+        )}
+      </div>
       <div className="left-part">
         <img src={job.company_logo} alt="job logo" />
         <div className="job-details">
