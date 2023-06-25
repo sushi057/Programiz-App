@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Programiz-App/static/css/main.ce15ba74.css",
-    "main.js": "/Programiz-App/static/js/main.1ab4d59a.js",
+    "main.js": "/Programiz-App/static/js/main.b67efc2d.js",
     "index.html": "/Programiz-App/index.html",
     "main.ce15ba74.css.map": "/Programiz-App/static/css/main.ce15ba74.css.map",
-    "main.1ab4d59a.js.map": "/Programiz-App/static/js/main.1ab4d59a.js.map"
+    "main.b67efc2d.js.map": "/Programiz-App/static/js/main.b67efc2d.js.map"
   },
   "entrypoints": [
     "static/css/main.ce15ba74.css",
-    "static/js/main.1ab4d59a.js"
+    "static/js/main.b67efc2d.js"
   ]
 }
