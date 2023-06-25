@@ -28,11 +28,20 @@ function App() {
 
   function removeCurrentTag(key) {
     setSelectKeywords((prevItem) => {
-      let index = selectKeywords.indexOf(key);
-      const removeKeywords = [...prevItem];
-      removeKeywords.splice(index, 1);
-      return removeKeywords;
+      // let index = selectKeywords.indexOf(key);
+      // const removeKeywords = [...prevItem];
+      // removeKeywords.splice(index, 1);
+      // console.log(removeKeywords);
+
+      // console.log(key);
+      // return removeKeywords;
+
+      console.log(key);
+      const deleteKeywords = prevItem.filter((item) => item !== key);
+      console.log(deleteKeywords);
+      return deleteKeywords;
     });
+    console.log(selectKeywords);
   }
 
   return (
@@ -44,7 +53,9 @@ function App() {
               {selectKeywords.map((item) => (
                 <Filter
                   filterWords={item}
-                  removeCurrentTag={removeCurrentTag}
+                  removeCurrentTag={() => {
+                    removeCurrentTag(item);
+                  }}
                 />
               ))}
             </div>
