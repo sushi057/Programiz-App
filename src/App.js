@@ -59,9 +59,19 @@ function App() {
           </div>
         )}
       </div>
-      {jobLists.map((item) => (
-        <Job job={item} addKeywords={addKeywords} />
-      ))}
+      {jobLists.map((item) => {
+        let intersectArray = selectKeywords.filter((i) =>
+          item.keywords.includes(i)
+        );
+        console.log(`The smilar tags are ${intersectArray}`);
+
+        if (selectKeywords.length === 0) {
+          return <Job job={item} addKeywords={addKeywords} />;
+        } else {
+          if (intersectArray.length > 0)
+            return <Job job={item} addKeywords={addKeywords} />;
+        }
+      })}
     </div>
   );
 }
